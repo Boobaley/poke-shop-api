@@ -10,9 +10,9 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "env-cmd -f .env nest start --watch",
+    "start:dev": "env-cmd -f .env-example nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "MONGODB_CONNECTION_STRING=mongodb+srv://Admin:Adrik1998@shop.tytlu.mongodb.net/?retryWrites=true&w=majority JWT_SECRET=K28syew3DS node dist/main",
+    "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -92,6 +92,6 @@
     "testEnvironment": "node"
   },
   "engines": {
-    "node": "16.16.0  "
+    "node": "16.16.0"
   }
 }

@@ -5,6 +5,6 @@ export class AppController {
 
   @Get()
   getHello(): string {
-    return 'Welcome to IT-SHATLE API';
+    return 'Welcome to Poke-Store-Api';
   }
 }

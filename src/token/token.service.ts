@@ -20,14 +20,17 @@ export class TokenService {
     uId: string,
     token: string
   ): Promise<{ ok?: number; n?: number }> {
-    return await this.tokenModel.deleteOne({ uId, token }).exec();
+    // @ts-ignore
+    return this.tokenModel.deleteOne({ uId, token }).exec();
   }
 
   async deleteAll(uId: string): Promise<{ ok?: number; n?: number }> {
-    return await this.tokenModel.deleteMany({ uId }).exec();
+    // @ts-ignore
+    return this.tokenModel.deleteMany({ uId }).exec();
   }
 
   async exists(uId: string, token: string): Promise<boolean> {
-    return await this.tokenModel.exists({ uId, token });
+    // @ts-ignore
+    return this.tokenModel.exists({ uId, token });
   }
 }
